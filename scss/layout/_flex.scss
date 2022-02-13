@@ -1,0 +1,12 @@
+.flex-holder {
+  display: flex;
+  max-width: $horizontal-width;
+  gap: $horizontal-gutter;
+  margin: auto;
+}
+
+.flex-child {
+  &-1 {
+    flex: 1;
+  }
+}
