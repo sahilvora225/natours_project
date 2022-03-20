@@ -3,6 +3,11 @@
   max-width: $horizontal-width;
   gap: $horizontal-gutter;
   margin: auto;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    width: 50%;
+  }
 }
 
 .flex-child {

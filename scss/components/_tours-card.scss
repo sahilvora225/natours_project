@@ -3,6 +3,16 @@
   gap: $horizontal-gutter;
   max-width: $horizontal-width;
   margin: auto;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+  }
+
+  @include respond(phone) {
+    width: 80%;
+  }
 }
 
 .card {
@@ -182,6 +192,53 @@
     &--value {
       font-size: 6rem;
       font-weight: 300;
+    }
+  }
+}
+
+@include respond(tab-port) {
+  .card {
+    height: auto;
+    width: 100%;
+    background-color: $color-white;
+    box-shadow: 0rem 1rem 2rem rgba($color-black, 0.15);
+  
+    &__side {
+      height: auto;
+      width: 100%;
+      position: relative;
+      top: 0;
+      box-shadow: none;
+  
+      &--back {
+        transform: rotateY(0deg);
+        clip-path: polygon(0 10%, 100% 0, 100% 100%, 0 100%);
+      }
+    }
+  
+    &:hover &__side--front {
+      transform: rotateY(0deg);
+    }
+  
+    &:hover &__side--back {
+      transform: rotateY(0deg);
+    }
+  
+    &__cta {
+      position: relative;
+      top: 0%;
+      left: 0%;
+      transform: translate(0%, 0%);
+      width: 100%;
+      padding: 7rem 4rem 4rem 4rem;
+    }
+  
+    &__price-box {
+      margin-bottom: 6rem;
+  
+      &--value {
+        font-size: 4rem;
+      }
     }
   }
 }
