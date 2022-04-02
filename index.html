@@ -296,7 +296,11 @@
     </main>
     <footer class="footer">
         <div class="footer__logo-box">
-            <img class="footer__logo" alt="Logo" src="/img/logo-green-1x.png">
+            <picture class="footer__logo">
+                <source srcset="/natours_project/img/logo-green-small-1x.png 1x, /natours_project/img/logo-green-small-2x.png 2x"
+                        media="(max-width: 37.5em)">
+                <img srcset="/natours_project/img/logo-green-1x.png 1x, /natours_project/img/logo-green-2x.png 2x" alt="Logo" src="/natours_project/img/logo-green-1x.png">
+            </picture>
         </div>
 
         <div class="row">
